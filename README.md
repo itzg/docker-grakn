@@ -25,7 +25,7 @@ services:
     volumes:
       - "cassandra:/var/lib/cassandra"
   grakn:
-    image: grakn
+    image: itzg/grakn
     ports:
       - "4567:4567"
 
