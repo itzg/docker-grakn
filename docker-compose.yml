@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  zookeeper:
+    image: jplock/zookeeper:3.4.9
+    volumes:
+      - "zookeeper:/tmp/zookeeper"
+  cassandra:
+    image: cassandra:2.1.9
+    volumes:
+      - "cassandra:/var/lib/cassandra"
+  grakn:
+    image: grakn
+    ports:
+      - "4567:4567"
+
+volumes:
+  cassandra:
+  zookeeper:
